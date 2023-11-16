@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <title>Методы простой итерации</title>
+</head>
+
+<body>
+    <main>
+        <img class="gradient blue" src="../images/blue-gradient.svg">
+        <img class="gradient together" src="../images/togetherColor-gradient.svg">
+        <img class="gradient red" src="../images/red-gradient.svg">
+
+        <section class="main-window">
+            <div class="container">
+                <div class="wrapper">
+
+                    <div class="left-block">
+                        <div class="block-titke">
+                            <h1 class="title">Методы простой итерации</h1>
+                            <a href="https://github.com/NIIIK2004"><img src="../images/Git.svg" alt="git"></a>
+                        </div>
+
+                        <h2 class="subtitle">Введите матрицу А и вектор B</h2>
+
+                        <div class="matrix-wrapper">
+                            <div class="matrix-rows">
+                                <span class="matrix-row text"><input type="number" id="a00"></span>
+                                <span class="matrix-sign text">+</span>
+                                <span class="matrix-row text"><input type="number" id="a01"></span>
+                                <span class="matrix-sign text">+</span>
+                                <span class="matrix-row text"><input type="number" id="a02"></span>
+                                <span class="matrix-sign text">+</span>
+                                <span class="matrix-row text"><input type="number" id="a03"></span>
+                                <span class="matrix-sign text">=</span>
+                                <span class="matrix-row text"><input type="number" id="b0"></span>
+                            </div>
+
+                            <div class="matrix-rows">
+                                <span class="matrix-row text"><input type="number" id="a10"></span>
+                                <span class="matrix-sign text">+</span>
+                                <span class="matrix-row text"><input type="number" id="a11"></span>
+                                <span class="matrix-sign text">+</span>
+                                <span class="matrix-row text"><input type="number" id="a12"></span>
+                                <span class="matrix-sign text">+</span>
+                                <span class="matrix-row text"><input type="number" id="a13"></span>
+                                <span class="matrix-sign text">=</span>
+                                <span class="matrix-row text"><input type="number" id="b1"></span>
+                            </div>
+
+                            <div class="matrix-rows">
+                                <span class="matrix-row text"><input type="number" id="a20"></span>
+                                <span class="matrix-sign text">+</span>
+                                <span class="matrix-row text"><input type="number" id="a21"></span>
+                                <span class="matrix-sign text">+</span>
+                                <span class="matrix-row text"><input type="number" id="a22"></span>
+                                <span class="matrix-sign text">+</span>
+                                <span class="matrix-row text"><input type="number" id="a23"></span>
+                                <span class="matrix-sign text">=</span>
+                                <span class="matrix-row text"><input type="number" id="b2"></span>
+                            </div>
+
+                            <div class="matrix-rows">
+                                <span class="matrix-row text"><input type="number" id="a30"></span>
+                                <span class="matrix-sign text">+</span>
+                                <span class="matrix-row text"><input type="number" id="a31"></span>
+                                <span class="matrix-sign text">+</span>
+                                <span class="matrix-row text"><input type="number" id="a32"></span>
+                                <span class="matrix-sign text">+</span>
+                                <span class="matrix-row text"><input type="number" id="a33"></span>
+                                <span class="matrix-sign text">=</span>
+                                <span class="matrix-row text"><input type="number" id="b3"></span>
+                            </div>
+                        </div>
+
+                        <h2 class="subtitle">Введите количество итераций:</h2>
+                        <div class="iterations__wrapper">
+                            <input class="iterations" type="number" id="iterations" placeholder="Количество итераций">
+                        </div>
+
+                        <button class="matrix-sendBtn" onclick="runIteration()">Выполнить итерации</button>
+
+                    </div>
+
+                    <div class="right-block">
+                        <h1 class="title">Результат итераций:</h1>
+                        <div class="right-block-output" id="output">
+
+                        </div>
+                        <button class="clear" onclick="clearOutput()">Очистить</button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+<script src="../js/main.js"></script>
+
+</html>
