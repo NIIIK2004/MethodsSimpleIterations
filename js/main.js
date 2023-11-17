@@ -12,15 +12,19 @@ function runIteration() {
     // Ввод начального приближения
     const x0 = [0, 0, 0, 0];
 
-    const iterations = +document.getElementById('iterations').value;
+    let iterations = +document.getElementById('iterations').value;
+    console.log('Iterations:', iterations); // добавьте эту строку для отладки
 
+    if (isNaN(iterations)) {
+        iterations = Infinity;
+    }
     const epsilon = Math.pow(10, -3);
 
-    const result = simpleIterationMethod(A, b, x0, iterations);
+    const result = simpleIterationMethod(A, b, x0, iterations, epsilon);
 
 }
 
-function simpleIterationMethod(A, b, x0, epsilon) {
+function simpleIterationMethod(A, b, x0, epsilon ) {
     const n = A.length;
     let x = new Array(n);
     let k = 0;
@@ -50,7 +54,7 @@ function simpleIterationMethod(A, b, x0, epsilon) {
         x0 = [...x];
         k++;
 
-    } while (error > epsilon)l
+    } while (error > epsilon || k < iterations);
 }
 
 function calculateError(x, x0) {
